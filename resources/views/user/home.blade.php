@@ -41,7 +41,7 @@
 
             </form>
             @else
-                <p class="text-center">No questions found</p>
+                <p class="text-center m-4">No questions found, please contact Admin</p>
             @endif
         </div>
     </div>
