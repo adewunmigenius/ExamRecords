@@ -1,0 +1,64 @@
+button#remove_option{
+    display: none;
+}
+
+.bal_table{
+    width: 100%;
+    overflow-x: scroll;
+}
+.ans-form label{
+    display:block;
+}
+.myresult{
+    min-height: 400px;
+}
+.prog_head{
+    margin-bottom: 60px;
+    text-align: center;
+}
+progress,
+progress::-webkit-progress-value,
+progress::-webkit-progress-bar{
+    border: 1px solid #ccc;
+    width: 290px;
+    height: 30px;
+    border-radius: 10px;
+    background: #38c172;
+    color: #fff;
+}
+progress.pr-red{
+    border: none;
+    background: #e3342f;
+}
+progress.pr-green::-webkit-progress-value {
+    border: none;
+    background: #38c172;
+}
+
+progress::-moz-progress-bar {
+    background: #fff;
+}
+
+/*progress.pr-green::-webkit-progress-value {*/
+    /*background: #38c172;*/
+/*}*/
+
+progress::-webkit-progress-bar {
+    background: #fff;
+}
+
+progress.pr-red::-webkit-progress-value {
+    border: none;
+    background: #e3342f;
+}
+
+/*progress.pr-green::-webkit-progress-value {*/
+/*background: #38c172;*/
+/*}*/
+/*@media (max-width:420px) {*/
+    /*canvas.allchart{*/
+        /*height:300px !important;*/
+    /*}*/
+/*}*/
+
+
