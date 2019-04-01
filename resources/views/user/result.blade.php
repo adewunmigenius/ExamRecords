@@ -14,10 +14,6 @@
                 </div>
             </div>
             <div class="col-md-6">
-                {{--<div class="text-center">--}}
-                    {{--<p id="restl">Results over time</p>--}}
-                {{--</div>--}}
-
                 <canvas id="myChart" width="300" height="300"></canvas>
             </div>
         </div>

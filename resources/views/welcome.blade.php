@@ -8,7 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         <!-- Styles -->
         <style>
             html, body {
@@ -75,7 +75,7 @@
             }
         </style>
     </head>
-    <body>
+    <body class="wel_body">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -99,17 +99,6 @@
                 <div>
                     <p class="mybody">Take test to check your current skillz level, and get your result immediately</p>
                 </div>
-
-                {{--<div class="links">--}}
-                    {{--<a href="https://laravel.com/docs">Docs</a>--}}
-                    {{--<a href="https://laracasts.com">Laracasts</a>--}}
-                    {{--<a href="https://laravel-news.com">News</a>--}}
-                    {{--<a href="https://blog.laravel.com">Blog</a>--}}
-                    {{--<a href="https://nova.laravel.com">Nova</a>--}}
-                    {{--<a href="https://forge.laravel.com">Forge</a>--}}
-                    {{--<a href="https://github.com/laravel/laravel">GitHub</a>--}}
-                {{--</div>--}}
-
             </div>
         </div>
     </body>
