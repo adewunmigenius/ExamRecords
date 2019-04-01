@@ -16,7 +16,7 @@ get result after test
 graph of all results to show performance overtime
 
 ## Test
-composer install
-php artisan migrate
-php artisan db:seed
+composer install \
+php artisan migrate \
+php artisan db:seed \
 php artisan serve
