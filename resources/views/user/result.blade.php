@@ -7,9 +7,9 @@
                 <div class="text-center">
                     <p class="">current test result on: {{ date('l\, jS \of F Y, h:i A', strtotime($result->created_at)) }}</p>
 
-                    <h4 class="m-4">{{$percentage > 50 ? 'CONGRATULATIONS' : 'UNFORTUNATELY'}}</h4>
+                    <h4 class="m-4">{{$percentage >= 50 ? 'CONGRATULATIONS' : 'UNFORTUNATELY'}}</h4>
                     <h2>{{$percentage}}%</h2>
-                    <progress class="{{$percentage > 50 ? 'pr-green' : 'pr-red'}}" value="{{$result->correct_questions}}" max="{{$result->total_questions}}"></progress>
+                    <progress class="{{$percentage >= 50 ? 'pr-green' : 'pr-red'}}" value="{{$result->correct_questions}}" max="{{$result->total_questions}}"></progress>
                     <h2><small>score</small> {{$result->correct_questions." / ".$result->total_questions}}</h2>
                 </div>
             </div>

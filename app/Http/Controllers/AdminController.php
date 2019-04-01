@@ -76,7 +76,7 @@ class AdminController extends Controller
             $score = $result->correct_questions;
             $totalquest = $result->total_questions;
             $myresult = round(($result->correct_questions/$result->total_questions)*100);
-            $grade = $myresult > 50 ? "passed" : "failed";
+            $grade = $myresult >= 50 ? "passed" : "failed";
 
             $lineData = array($sn, $thedate, $result->user->name, $result->user->email, $score, $totalquest, $myresult, $grade);
             array_push($results_csv, $lineData);
@@ -124,7 +124,7 @@ class AdminController extends Controller
             $sn += 1;
             $score = $result->correct_questions." / ".$result->total_questions;
             $result = round(($result->correct_questions/$result->total_questions)*100);
-            $grade = $result > 50 ? "passed" : "failed";
+            $grade = $result >= 50 ? "passed" : "failed";
 
             $lineData = array($sn, $result->user->name, $result->user->email, $score, $grade);
             fputcsv($output, $lineData, $delimiter);

@@ -23,7 +23,7 @@
                                     <td>{{ date('l\, jS \of F Y, h:i A', strtotime($score->created_at)) }}</td>
                                     <td>{{$score->correct_questions." / ".$score->total_questions}}</td>
                                     <td>{{ round(($score->correct_questions/$score->total_questions)*100) }}</td>
-                                    <td><?php echo round(($score->correct_questions/$score->total_questions)*100) > 50 ? "<btn class=\"btn btn-sm btn-success\">passed</button>" : "<btn class=\"btn btn-sm btn-danger\">failed</button>"?></td>
+                                    <td><?php echo round(($score->correct_questions/$score->total_questions)*100) >= 50 ? "<btn class=\"btn btn-sm btn-success\">passed</button>" : "<btn class=\"btn btn-sm btn-danger\">failed</button>"?></td>
                                 </tr>
                             @endforeach
                             </tbody>

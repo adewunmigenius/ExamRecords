@@ -40,7 +40,7 @@
                                     <td>{{$score->user->email}}</td>
                                     <td>{{$score->correct_questions." / ".$score->total_questions}}</td>
                                     <td>{{ round(($score->correct_questions/$score->total_questions)*100) }}</td>
-                                    <td><?php echo round(($score->correct_questions/$score->total_questions)*100) > 50 ? "<btn class=\"btn btn-sm btn-success\">passed</button>" : "<btn class=\"btn btn-sm btn-danger\">failed</button>"?></td>
+                                    <td><?php echo round(($score->correct_questions/$score->total_questions)*100) >= 50 ? "<btn class=\"btn btn-sm btn-success\">passed</button>" : "<btn class=\"btn btn-sm btn-danger\">failed</button>"?></td>
                                 </tr>
                             @endforeach
                             </tbody>
@@ -122,7 +122,7 @@
             var disdate = new Date()
             var dhour = disdate.getHours()
             var chour = dhour > 12 ? dhour - 12 : dhour
-            var zonin = dhour > 12 ? 'PM' : 'AM';
+            var zonin = dhour >= 12 ? 'PM' : 'AM';
             var dfilename = 'results_'+disdate.getFullYear()+'-'+disdate.getMonth()+'-'+disdate.getDay()+'_'+chour+'.'+disdate.getMinutes()+'.'+disdate.getSeconds()+zonin+'.csv'
             var hiddenElement = document.createElement('a');
             hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
